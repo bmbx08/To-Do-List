@@ -31,22 +31,22 @@ function render(){
     let resultHTML = '';
     for(let i=0; i<taskList.length; i++){
         if(taskList[i].isDeleted == true){
-            resultHTML = '';
+            resultHTML += '';
         } else{
             if(taskList[i].isComplete == true){
-                resultHTML+=`<div class="task">
+                resultHTML+=`<div class="task-done-background">
                 <div class = "task-done">${taskList[i].taskContent}</div>
                 <div>
-                    <button onclick="toggleComplete('${taskList[i].id}')">Check</button>
-                    <button onclick="deleteTask('${taskList[i].id}')">Delete</button>
+                    <button onclick="toggleComplete('${taskList[i].id}')"><i class="fa-solid fa-backward"></i></button>
+                    <button onclick="deleteTask('${taskList[i].id}')"><i class="fa-solid fa-eraser"></i></button>
                 </div>
             </div>`
             } else {
                 resultHTML += `<div class="task">
                 <div>${taskList[i].taskContent}</div>
                 <div>
-                    <button onclick="toggleComplete('${taskList[i].id}')">Check</button> 
-                    <button onclick="deleteTask('${taskList[i].id}')">Delete</button>
+                    <button onclick="toggleComplete('${taskList[i].id}')"><i class="fa-regular fa-thumbs-up"></i></button> 
+                    <button onclick="deleteTask('${taskList[i].id}')"><i class="fa-solid fa-eraser"></i></button>
                 </div>
             </div>` //객체의 taskContent 값만 필요하기 때문에 .taskContent를 쓴다
             } //onclick과 addEventListener의 차이는 코딩누나님이 자료로 정리해주신다했음.
@@ -60,7 +60,7 @@ function toggleComplete(id) {
     for(let i=0;i<taskList.length;i++){
         if(taskList[i].id == id){
             taskList[i].isComplete = !taskList[i].isComplete; //!연산을 쓰면 true=>false, false=>true 둘 다 할 수 있다.
-            break;6
+            break;
         }
     }
     render(); //값을 바꾼 후 render() 함수를 불러와서 UI도 최신화한다.

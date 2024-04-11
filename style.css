@@ -1,11 +1,20 @@
+@font-face{
+    font-family: '둥글';
+    font-style: 'normal';
+    font-weight: 400;
+    src: url('KCC-Ganpan.woff');
+}
+
 body{
-    margin:0; /* //기본 속성이 8px */
+    margin:0; /* 기본 속성이 8px */
     background-image: url("images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: "둥글";
 } 
 
 .container {
+    text-align:center; /* 임의로 추가 */
     background-color: white;
     min-height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  /* 구글에 box shadow css 치면 양식 나온다 */
@@ -44,4 +53,11 @@ body{
 
 .task-done{
     text-decoration: line-through;   /* 글자에 찍찍 긋기 */
+}
+
+.task-done-background{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: lightgray;
 }
