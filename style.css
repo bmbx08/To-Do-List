@@ -33,15 +33,16 @@ body{
 
 .task-tabs div{
     padding: 1em; 
+    cursor: pointer
 }
 
 #under-line{
-    height: 4px;
     background-color: pink;
     position: absolute;
-    width: 80px;
+    width: 0px;
     left: 0px;
-    top: 52px;
+    top: 0px;
+    height: 4px;
     padding: 0px;
 }
 
