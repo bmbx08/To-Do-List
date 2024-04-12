@@ -44,6 +44,7 @@ body{
     top: 0px;
     height: 4px;
     padding: 0px;
+    transition: 0.25s;
 }
 
 .task{
