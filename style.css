@@ -7,28 +7,53 @@
 
 body{
     margin:0; /* 기본 속성이 8px */
-    background-image: url("images/background.jpg");
+    background-image: url("images/desk3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "둥글";
+    min-height: 100vh;
 } 
+
+
+input {
+    width: 50%;
+    cursor: cell;
+    margin: 4px 2px;
+    padding: 3px 5px;
+}
+
+#add-button{
+    margin:5px;
+}
 
 .container {
     text-align:center; /* 임의로 추가 */
-    background-color: white;
-    min-height: 100vh;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  /* 구글에 box shadow css 치면 양식 나온다 */
+    background-image: url("images/clipboard5.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    max-width: 800px;
+    min-height: 90vh;
+    margin-top: 0vh;
+    margin-bottom: 5vh;
+    
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  */
+    /* 구글에 box shadow css 치면 양식 나온다 */
 }
 
 .task-area {
     border: 1px solid lightgray; 
-    margin-top: 2em;
+    margin-top: 1.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
 }
 
 .task-tabs {
     display: flex; /* flex 적용을 해야 글자들이 가로로 정렬된다 */
     border-bottom: 1px solid lightgray;
-    position: relative;
+    position: relative; 
+    justify-content: space-evenly;
+    
 }
 
 .task-tabs div{
@@ -37,7 +62,7 @@ body{
 }
 
 #under-line{
-    background-color: pink;
+    background-color: lightskyblue;
     position: absolute;
     width: 0px;
     left: 0px;
@@ -62,4 +87,8 @@ body{
     justify-content: space-between;
     padding: 1em;
     background-color: lightgray;
+}
+
+span {
+    position: relative;
 }
