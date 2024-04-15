@@ -46,6 +46,7 @@ input {
     margin-top: 1.5em;
     margin-left: 2.5em;
     margin-right: 2.5em;
+    margin-bottom: 5em;
 }
 
 .task-tabs {
@@ -89,6 +90,10 @@ input {
     background-color: lightgray;
 }
 
-span {
-    position: relative;
+img {
+    position: absolute;
+    right: 18%;
+    top: 15%;
+    width: auto;
+    max-height: 80%;
 }
